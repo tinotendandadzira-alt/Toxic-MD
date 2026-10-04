@@ -1,0 +1,21 @@
+const { zokou } = require("../../framework/zokou")
+
+zokou({ nomCom: "ping", categorie: "General" }, async (dest, zk, commandeOptions) => {
+  const { ms } = commandeOptions
+  await zk.sendMessage(dest, { text: "*Pong! Bot is Alive ✅*\n> Speed: fast" }, { quoted: ms })
+})
+
+zokou({ nomCom: "owner", categorie: "General" }, async (dest, zk, commandeOptions) => {
+  const { ms } = commandeOptions
+  await zk.sendMessage(dest, { text: "*Owner: Tino*\n*Number: +263771650993*\n*Bot: Spider-V6*" }, { quoted: ms })
+})
+
+zokou({ nomCom: "alive", categorie: "General" }, async (dest, zk, commandeOptions) => {
+  const { ms } = commandeOptions
+  await zk.sendMessage(dest, { text: "✅ *Spider Bot is Online!*\n\nType *.menu* to see all commands" }, { quoted: ms })
+})
+
+zokou({ nomCom: "info", categorie: "General" }, async (dest, zk, commandeOptions) => {
+  const { ms } = commandeOptions
+  await zk.sendMessage(dest, { text: "*Bot Name:* Spider MD\n*Version:* V6\n*Owner:* Tino 263771650993\n*Location:* Zimbabwe\n*Status:* Online 24/7" }, { quoted: ms })
+})
